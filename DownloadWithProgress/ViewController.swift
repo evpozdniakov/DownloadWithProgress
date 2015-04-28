@@ -72,4 +72,3 @@ class ViewController: UIViewController {
         Ajax.downloadFileFromUrl(remoteURL, saveTo: localURL, reportingProgress: progressHandler)
     }
 }
-

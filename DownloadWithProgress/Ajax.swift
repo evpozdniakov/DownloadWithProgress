@@ -160,6 +160,15 @@ class Ajax: NSObject {
     }
 
     /**
+        Will download file from remote and save it locally. It will call progress handler periodically while downloading. Works asyncronously.
+
+        Usage:
+
+            Ajax.downloadFileFromUrl(remoteURL, saveTo: localURL) { bytesDownloaded, bytesTotal in
+                // display progress
+            }
+
+        :returns: NSURLSessionDownloadTask
     */
     static func downloadFileFromUrl(remoteURL: NSURL, saveTo localURL: NSURL, reportingProgress progressHandler: ((Int64, Int64) -> Void)?) -> NSURLSessionDownloadTask {
         let ajax = Ajax()
